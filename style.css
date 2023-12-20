@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #000033 0%, #660033 100%);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* main {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+} */
+
+.grid {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  /* background-color: #aaa; */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7rem;
+  background-color: #00004d;
+  width: 10rem;
+  height: 10rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  opacity: 0.7;
+}
+
+.row:hover {
+  opacity: 0.9;
+  background-color: #000066;
+  transform: translateY(-5%);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.row:active {
+  transform: translateY(-2%);
+}
+
+.player {
+  letter-spacing: 3px;
+  height: 80%;
+  width: 20%;
+  color: #aaa;
+  /* background-color: rgba(240, 248, 255, 0.473); */
+  position: absolute;
+}
+
+.player--0 {
+  top: 10%;
+  left: 10%;
+}
+
+.player--1 {
+  top: 10%;
+  right: 10%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.6rem;
+  opacity: 0.35;
+}
+
+.score {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 12.8rem;
+  opacity: 0.35;
+}
+
+.btn-new {
+  border: none;
+  background-color: #fff;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-new:hover {
+  background-color: #bbb;
+}
+
+.btn-new:active {
+  transform: translate(-50%, -43%);
+}
+
+/* ********************************/
+
+.player-active {
+  transition: all 0.9s;
+  .score {
+    opacity: 0.75;
+    transition: all 0.5s;
+  }
+  .name--0,
+  .name--1 {
+    transition: all 0.5s;
+    opacity: 0.75;
+  }
+  /* background-color: #00007d36; */
+  /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.player-winner {
+  background-color: #ffffff33;
+  /* background-color: rgba(255, 217, 0, 0.3) !important; */
+}
+
+.close-winner-btn {
+  color: #333;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 4rem;
+  background-color: transparent;
+  border: none;
+}
+
+.winner {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 2rem 6rem;
+  font-size: 1.8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.65;
+  transition: all 0.4s;
+}
+
+footer {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer p {
+  opacity: 0.6;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #00004d;
+  transition: all 0.3s;
+}
+
+footer p:hover {
+  opacity: 1;
+}
+
+header {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  color: #aaa;
+  font-size: 7rem;
+  text-align: center;
+  opacity: 0.6;
+  transition: all 0.7s;
+}
+h1:hover {
+  opacity: 1;
+}
+
+/* © ALl rights Reserved -- By Enoch 👩‍💻😃*/
+
+/************************Media Queries ***********************/
+
+@media (max-width: 34em) {
+  .player {
+    height: 30%;
+    width: 40%;
+  }
+
+  .player--0 {
+    top: 75%;
+    left: 5%;
+  }
+
+  .player--1 {
+    top: 75%;
+    right: 5%;
+  }
+  .score {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 6rem;
+  }
+  .name--0,
+  .name--1 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  .grid {
+    margin-top: -6rem;
+  }
+  .btn-new {
+    padding: 0.6rem 1.2rem;
+    bottom: 3%;
+    font-size: 1.4rem;
+  }
+  footer {
+    padding: 0.8rem;
+  }
+
+  footer p {
+    font-size: 1.4rem;
+  }
+  .row {
+    font-size: 5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  div h2 {
+    font-size: 1.4rem !important;
+  }
+  .winner {
+    padding: 1rem 2rem;
+    padding-right: 3rem;
+  }
+  .close-winner-btn {
+    top: 0rem;
+    right: 0.7rem;
+    font-size: 3rem;
+  }
+}
+
+/* 0972794963 */
