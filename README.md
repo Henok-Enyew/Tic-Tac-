@@ -1,2 +1,2 @@
 # Tic-Tac-
-(https://tic-tac-simple.netlify.app)[Simple Tic Tac game]
+[Simple Tic Tac game](https://tic-tac-simple.netlify.app)
